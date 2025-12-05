@@ -606,7 +606,7 @@ ul.slick-dots {
 
 .fun-facts em {
 	font-style: normal;
-	color: rgb(112, 112, 206);
+	color: #0096c4;
 }
 
 .fun-facts p {
@@ -627,7 +627,7 @@ ul.slick-dots {
 
 .count-digit {
     margin: 5px 0px;
-    color: rgb(112, 112, 206);
+    color: #0096c4;
     font-weight: 700;
     font-size: 36px;
 }
@@ -685,7 +685,7 @@ ul.slick-dots {
 
 .more-info .right-content em {
 	font-style: normal;
-	color: rgb(112, 112, 206);
+	color: #0096c4;
 }
 
 .more-info .right-content p {
@@ -726,7 +726,7 @@ ul.slick-dots {
 	margin-top: 8px;
 	font-weight: 600;
 	font-size: 14px;
-	color: rgb(112, 112, 206);
+	color: #0096c4;
 }
 .testimonial-item img {
 	max-width: 60px;
@@ -759,7 +759,7 @@ ul.slick-dots {
 }
 
 .callback-form .contact-form {
-	background-color: rgb(112, 112, 206);
+	background-color: #0096c4;
 	padding: 60px;
 	border-radius: 5px;
 	text-align: center;
@@ -889,7 +889,7 @@ ul.slick-dots {
 /* Footer Style */
 
 footer {
-	background-color: rgb(112, 112, 206);
+	background-color: #0096c4;
 	padding: 80px 0px;
 	color: #fff;
 }

@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: "Segoe UI", Arial, sans-serif;
+            color: #333;
+        }
+
+        /* NAV BAR */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 40px;
+            background: #ffffff;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 999;
+        }
+
+        .nav-links {
+    display: flex;
+    gap: 20px;
+          }
+
+        nav img {
+            height: 100px;
+        }
+
+        /* HAMBURGER BUTTON (HIDDEN ON DESKTOP) */
+.hamburger {
+    display: none;
+    font-size: 32px;
+    cursor: pointer;
+}
+
+        nav a {
+            margin-left: 20px;
+            text-decoration: none;
+            color: #333;
+            font-weight: 600;
+            font-size: 20px;
+        }
+
+        /* HERO */
+        .hero {
+            background: url("./assets/images/hiv2.png") center/cover no-repeat;
+            height: 70vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: #fff;
+            padding: 0 20px;
+        }
+
+        .hero h1 {
+            font-size: 3.2rem;
+            margin-bottom: 10px;
+            text-shadow: 1px 1px 8px rgba(0,0,0,0.6);
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            text-shadow: 1px 1px 8px rgba(0,0,0,0.6);
+        }
+
+        /* ABOUT CONTENT */
+        .about-section {
+            max-width: 1000px;
+            margin: 60px auto;
+            padding: 0 20px;
+            text-align: center;
+        }
+
+        .about-section h2 {
+            font-size: 2rem;
+            margin-bottom: 15px;
+            color: #0a3d62;
+        }
+
+        .about-section p {
+            font-size: 1.1rem;
+            line-height: 1.7;
+        }
+
+       /* NEW MODERN CARDS */
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.card {
+    background: #ffffff;
+    padding: 30px 25px;
+    border-radius: 16px;
+    text-align: left;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Floating Icon Circle */
+.card::before {
+    content: "";
+    width: 55px;
+    height: 55px;
+    background: purple;
+    border-radius: 50%;
+    position: absolute;
+    top: -25px;
+    right: -25px;
+    opacity: 0.15;
+}
+
+/* Hover Effect */
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 18px rgba(0,0,0,0.12);
+}
+
+.card h3 {
+    color: #0a3d62;
+    margin-bottom: 12px;
+    font-size: 1.4rem;
+    font-weight: 700;
+}
+
+.card p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #444;
+}
+
+        /* MOBILE MENU */
+@media(max-width: 768px) {
+
+    .nav-links {
+        position: absolute;
+        top: 80px;
+        right: 0;
+        background: white;
+        width: 100%;
+        flex-direction: column;
+        text-align: center;
+        padding: 20px 0;
+        display: none;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+    }
+
+    .nav-links a {
+        padding: 12px 0;
+        font-size: 1.1rem;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    /* When menu is active */
+    .nav-links.active {
+        display: flex;
+        animation: fadeDown 0.3s ease-in-out;
+    }
+
+    @keyframes fadeDown {
+        from { opacity: 0; transform: translateY(-10px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+}
+
+
+
+
+
+/* tabs */
+
+
+    .tabs-container {
+  max-width: 900px;
+  margin: auto;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  overflow: hidden;
+}
+
+.tab-buttons {
+  display: flex;
+  background: #0096c4;
+}
+
+.tab-button {
+  flex: 1;
+  padding: 15px;
+  cursor: pointer;
+  text-align: center;
+  color: white;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.tab-button:hover, .tab-button.active {
+  background: purple;
+}
+
+.tab-content {
+  display: none;
+  padding: 30px;
+  animation: fadeIn 0.5s ease;
+}
+
+.tab-content.active {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.tab-content img {
+  max-width: 350px;
+  width: 100%;
+  border-radius: 1px;
+  height: 42vh;
+}
+
+.tab-text {
+  flex: 1;
+
+}
+
+.tab-text h3 {
+  margin-top: 0;
+  color: purple;
+}
+
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+@media (max-width: 768px) {
+  .tab-content {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+
+
+
+
+/* tabs */
+        /* FOOTER */
+        footer {
+            background: #0096c4;
+            padding: 25px;
+            text-align: center;
+            color: #fff;
+            margin-top: 60px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- NAV BAR -->
+    <nav>
+    <img src="./assets/images/Tides 24 Foundation Logo.png" alt="Logo">
+
+    <div class="nav-links" id="navLinks">
+        <a href="./index.html">Home</a>
+        <a href="#services">Our Services</a>
+        <a href="#contactus">Contact</a>
+    </div>
+
+    <!-- Hamburger Icon -->
+    <div class="hamburger" onclick="toggleMenu()">
+        ☰
+    </div>
+</nav>
+
+
+    <!-- HERO SECTION -->
+    <section class="hero">
+        <div>
+            <h1>About Us</h1>
+            <p>Lets Find Out Who TFZ Is</p>
+        </div>
+    </section>
+
+    <!-- ABOUT CONTENT SECTION -->
+    <section class="about-section">
+        <h2 style="color: #67009e;">Who We Are</h2>
+        <p>
+            Tides 24 Foundation Zambia (TFZ), registered in 2024, is a community-focused Non-Governmental Organization (NGO) dedicated to improving the health and well-being of individuals living with and those at risk of HIV in Zambia. With a special emphasis on women, children, and young people, TFZ works to drive sustainable community health transformation by mobilizing resources and fostering resilientt communities that respond to their own health challenges.
+        </p>
+        
+        </br>
+        <p>
+            Our approach centres on community-driven approaches ensuring that children, adolescents, and women receive comprehensive health services, social protection, and economic support. A key strategy is the integration of self-care approaches, empowering individuals with knowledge and tools to take charge of their health, reducing dependence on overburdened healthcare facilities.  
+        </p>
+    </br>
+        <p>
+            We integrate gender transformative programming in our work which ensures that women and girls, who are oftentimes the most vulnerable, receive the necessary support in areas such as education, economic opportunities, and sexual and reproductive health services. We promote development anchored and livelihood- based health innovations aimed at reducing inequalities and empowering these groups to actively participate in the development of their communities.
+
+ Our advocacy efforts for improved community health outcomes envisions improved leadership, policy environment and accountability for better health, connects communities with relevant platforms, duty bearers and Policy makers at sub-national and national levels.
+  
+        </p>
+        <div class="cards">
+            <div class="card">
+                <h3 style="color: #67009e;">Health and Well-being</h3>
+                <p>To enhance comprehensive healthcare access, focusing on HIV prevention, treatment, and overall health services for  children, women and   young people.</p>
+            </div>
+
+            <div class="card">
+                <h3 style="color: #67009e;">Gender Equality and Social Inclusion</h3>
+                <p>3.Promote gender-transformative and inclusive practices, empowering women, youth, and marginalized groups</p>
+            </div>
+
+               <div class="card">
+                <h3 style="color: #67009e;">Sustainable Livelihoods</h3>
+                <p>Foster economic empowerment and resilience among Adolescents and young women, women and  people living with or at risk of HIV </p>
+            </div>
+
+            <div class="card">
+                <h3 style="color: #67009e;">Community Empowerment and Governance</h3>
+                <p>Strengthen community engagement and governance andactive participation of those living with or at risk of HIV in decision-making processes, </p>
+            </div>
+
+            <div class="card">
+                <h3 style="color: #67009e;">Climate Change Adaptation</h3>
+                <p>Implement climate-resilient strategies for adolescents and young women, women and  individuals affected by HIV</p>
+            </div>
+        </div>
+    </section>
+
+
+
+
+<script>
+
+
+function toggleMenu() {
+    document.getElementById("navLinks").classList.toggle("active");
+}
+</script>
+
+
+
+
+
+
+<!-- addition -->
+
+<div class="tab-buttons">
+    <div class="tab-button active" onclick="showTab(0)">Organisational Objectives </div>
+    <div class="tab-button" onclick="showTab(1)">Vision</div>
+    <div class="tab-button" onclick="showTab(2)">Mission</div>
+  </div>
+
+  <div class="tab-content active">
+    <img src="./assets/images/Tides6.jpg" alt="Vision Image">
+    <div class="tab-text">
+      <h3>Organisational Objectives </h3>
+      <p>Our organization is committed to enhancing comprehensive healthcare access with a focus on HIV prevention and treatment for children, women, and young people; fostering economic empowerment and resilience among adolescents, young women, and individuals living with or at risk of HIV; promoting gender-transformative and inclusive practices that empower women, youth, and marginalized groups; implementing climate-resilient strategies for adolescents, young women, and those affected by HIV; and strengthening community engagement and governance to ensure active participation of individuals living with or at risk of HIV in decision-making processes.</p>
+    </div>
+  </div>
+
+  <div class="tab-content">
+    <img src="./assets/images/Tides5.jpg" alt="Vision Image">
+    <div class="tab-text">
+      <h3>Our Vision</h3>
+      <p>We envision a Zambia where individuals, particularly women, youth, and children living with or at risk of HIV, have access to comprehensive support systems that empower them to lead healthy and fulfilling lives.
+
+A Zambia where every individual can achieve their full potential.</p>
+    </div>
+  </div>
+
+  <div class="tab-content">
+    <img src="./assets/images/Tides4.jpg" alt="Vision Image">
+    <div class="tab-text">
+      <h3>Our Mission</h3>
+      <p>To transform communities by empowering individuals living with or at risk of HIV through innovative, community-driven initiatives that promote health, gender equity, sustainable livelihoods, and social inclusion, fostering resilience and creating opportunities for everyone to thrive.</p>
+    </div>
+  </div>
+</div>
+
+<script>
+  function showTab(index) {
+    const tabs = document.querySelectorAll('.tab-content');
+    const buttons = document.querySelectorAll('.tab-button');
+    tabs.forEach((tab, i) => {
+      tab.classList.toggle('active', i === index);
+      buttons[i].classList.toggle('active', i === index);
+    });
+  }
+</script>
+
+
+
+    <!-- FOOTER -->
+    <footer>
+        © 2025 Tides 24 Foundation All Rights Reserved.
+    </footer>
+
+</body>
+</html>
