@@ -1,727 +1,181 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-   <link rel="stylesheet" href="css/font-awesome.min.css">
-  <title>About Us</title>
- 
-  <style>
-    @import url("https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900");
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
 
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Poppins', sans-serif;
-    }
-
-    body {
-      background-color: #f4f4f4;
-      color: #333;
-    }
-
-
-    /* Footer Style */
-
-.footer {
-  background-color: #1e1e1e;
-  color: #ffffff;
-  padding: 40px 20px 20px;
+<style>
+.ngo-section {
+  padding: 80px 20px;
+  background: linear-gradient(to bottom, #ffffff, #f4f7fb);
+  font-family: 'Segoe UI', sans-serif;
 }
 
-.footer-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  gap: 30px;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.footer-links,
-.footer-social,
-.footer-form {
-  flex: 1 1 300px;
-}
-
-.footer-links h3,
-.footer-social h3,
-.footer-form h3 {
-  margin-bottom: 15px;
-  font-size: 20px;
-  color: #f4f4f4;
-}
-
-.footer-links ul {
-  list-style: none;
-}
-
-.footer-links ul li {
-  margin-bottom: 10px;
-}
-
-.footer-links ul li a {
-  color: #ccc;
-  text-decoration: none;
-  transition: color 0.3s;
-}
-
-.footer-links ul li a:hover {
-  color: #5fb759;
-}
-
-.social-icons a {
-  margin-right: 10px;
-  font-size: 20px;
-  color: #ffffff;
-  transition: color 0.3s;
-}
-
-.social-icons a:hover {
-  color: #5fb759 ;
-}
-
-.footer-form form {
-  display: flex;
-  flex-direction: column;
-}
-
-.footer-form input,
-.footer-form textarea {
-  padding: 10px;
-  margin-bottom: 10px;
-  border: none;
-  border-radius: 5px;
-  resize: vertical;
-}
-
-.footer-form button {
-  padding: 10px;
-  background-color: #5fb759;
-  color: #ffffff;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-.footer-form button:hover {
-  background-color: #5fb759;
-}
-
-.footer-bottom {
+.section-title {
   text-align: center;
-  padding-top: 20px;
-  font-size: 14px;
-  color: #ccc;
+  font-size: 36px;
+  margin-bottom: 60px;
+  font-weight: 600;
+  color: #1a1a1a;
 }
 
+.ngo-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 40px;
+}
 
-.contact-section {
-      background: url('https://via.placeholder.com/1200x800') no-repeat center center/cover;
-      height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
+.ngo-card {
+  background: #ffffff;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.06);
+  transition: all 0.35s ease;
+}
 
-    .contact-form {
-      background: rgba(255, 255, 255, 0.9);
-      padding: 40px;
-      border-radius: 12px;
-      width: 100%;
-      max-width: 500px;
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-    }
+.ngo-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.1);
+}
 
-    .contact-form h2 {
-      text-align: center;
-      margin-bottom: 25px;
-      font-size: 28px;
-      color: #333;
-    }
-
-    .contact-form input,
-    .contact-form textarea {
-      width: 100%;
-      padding: 12px;
-      margin-bottom: 15px;
-      border: 1px solid #ccc;
-      border-radius: 6px;
-      font-size: 16px;
-    }
-
-    .contact-form textarea {
-      resize: vertical;
-      min-height: 120px;
-    }
-
-    .contact-form button {
-      width: 100%;
-      padding: 12px;
-      background-color: #5fb759;
-      color: white;
-      border: none;
-      border-radius: 6px;
-      font-size: 16px;
-      cursor: pointer;
-    }
-
-    .contact-form button:hover {
-      background-color: #5fb759;
-    }
-
-    @media (max-width: 600px) {
-      .contact-form {
-        padding: 20px;
-      }
-    }
-
-
-
-
-
-
-    
-
-
-    .tabs-container {
-  max-width: 900px;
-  margin: auto;
-  background: #fff;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+/* Image Section */
+.card-image {
+  position: relative;
+  height: 240px;
   overflow: hidden;
 }
 
-.tab-buttons {
-  display: flex;
-  background: rgb(0, 0, 0);
-}
-
-.tab-button {
-  flex: 1;
-  padding: 15px;
-  cursor: pointer;
-  text-align: center;
-  color: white;
-  font-weight: bold;
-  transition: background 0.3s ease;
-}
-
-.tab-button:hover, .tab-button.active {
-  background:#5fb759;
-}
-
-.tab-content {
-  display: none;
-  padding: 30px;
-  animation: fadeIn 0.5s ease;
-}
-
-.tab-content.active {
-  display: flex;
-  flex-direction: row;
-  gap: 30px;
-  align-items: center;
-  flex-wrap: wrap;
-}
-
-.tab-content img {
-  max-width: 350px;
+.card-image img {
   width: 100%;
-  border-radius: 1px;
-  height: 42vh;
-}
-
-.tab-text {
-  flex: 1;
-
-}
-
-.tab-text h3 {
-  margin-top: 0;
-  color: #5fb759;
-}
-
-@keyframes fadeIn {
-  from {opacity: 0;}
-  to {opacity: 1;}
-}
-
-@media (max-width: 768px) {
-  .tab-content {
-    flex-direction: column;
-    text-align: center;
-  }
-}
-
-
-    header {
-      background: #000000;
-      color: #fff;
-      padding: 15px 20px;
-      position: relative;
-    }
-
-    .nav-container {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      max-width: 1100px;
-      margin: 0 auto;
-    }
-
-    .logo img {
-      height: 15vh;
-    }
-
-    nav {
-      display: flex;
-      gap: 20px;
-      align-items: center;
-    }
-
-    nav a, .dropdown > button {
-      color: white;
-      background: none;
-      border: none;
-      font-weight: 500;
-      text-decoration: none;
-      cursor: pointer;
-      padding: 5px 10px;
-    }
-
-    nav a:hover, .dropdown:hover > button {
-      color: #5fb759;
-    }
-
-    .dropdown {
-      position: relative;
-    }
-
-    .dropdown-content {
-      display: none;
-      position: absolute;
-      top: 35px;
-      left: 0;
-      background-color: #fff0f0;
-      width: 400px;
-      z-index: 1;
-      flex-direction: column;
-    }
-
-    .dropdown-content a {
-      padding: 10px;
-      color: rgb(0, 0, 0);
-      text-decoration: none;
-      border-bottom: 1px solid #5fb759;
-    }
-
-    .dropdown-content a:hover {
-      background-color: #5fb759;
-      color: #fff;
-    }
-
-    .dropdown:hover .dropdown-content {
-      display: flex;
-    }
-
-    .hamburger {
-      display: none;
-      flex-direction: column;
-      cursor: pointer;
-      gap: 5px;
-    }
-
-    .hamburger div {
-      width: 25px;
-      height: 3px;
-      background: white;
-    }
-
-    .mobile-menu {
-      display: none;
-      flex-direction: column;
-      background-color: #333;
-      padding: 10px 20px;
-    }
-
-    .mobile-menu a, .mobile-menu .mobile-dropdown-btn {
-      padding: 10px 0;
-      border-bottom: 1px solid #444;
-      color: white;
-      text-decoration: none;
-    }
-
-    .mobile-dropdown-content {
-      display: none;
-      flex-direction: column;
-      padding-left: 15px;
-    }
-
-    .mobile-dropdown-content a {
-      border-bottom: none;
-    }
-
-    .hero {
-      background: url('./assets/images/sf2.png') center/cover no-repeat;
-      height: 300px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      color: white;
-      text-shadow: 1px 1px 4px rgba(0,0,0,0.7);
-      text-align: center;
-      padding: 0 20px;
-    }
-
-    .hero h1 {
-      font-size: 3em;
-      font-weight: 700;
-    }
-
-
-    .about-section {
-  padding: 50px 20px;
-  background-color: #fff;
-  text-align: center;
-}
-
-.about-content {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 20px;
-  flex-wrap: wrap;
-}
-
-.about-img {
-  width: 150px;
-  height: 150px;
+  height: 100%;
   object-fit: cover;
+  transition: transform 0.6s ease;
 }
 
-.about-content .left-img{
-
-  height: 50vh;
-  width: 40vh;
+.ngo-card:hover img {
+  transform: scale(1.08);
 }
 
-
-.about-content .right-img{
-
-height: 50vh;
-width: 40vh;
+/* Gradient Overlay */
+.card-image::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  background: linear-gradient(to top, rgba(0,0,0,0.6), transparent);
 }
 
-
-.about-text {
-  max-width: 700px;
+/* Badge */
+.badge {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  background: #007bff;
+  color: #fff;
+  padding: 6px 14px;
+  font-size: 12px;
+  border-radius: 50px;
+  font-weight: 500;
 }
 
-.about-text h3 {
-  font-weight: 400;
-  font-size: 1.2rem;
-  margin-bottom: 10px;
-  color: #555;
+/* Content */
+.card-content {
+  padding: 25px;
 }
 
-.about-text h1 {
-  font-size: 2rem;
-  font-weight: 700;
+.card-meta {
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+  color: #777;
   margin-bottom: 15px;
+}
+
+.card-content h3 {
+  font-size: 22px;
+  margin-bottom: 12px;
   color: #222;
 }
 
-.about-text p {
-  color: #666;
+.card-content p {
+  font-size: 15px;
+  color: #555;
+  margin-bottom: 20px;
   line-height: 1.6;
-  margin-bottom: 10px;
 }
 
-.about-buttons {
-  display: flex;
-  gap: 15px;
-  justify-content: center;
-  flex-wrap: wrap;
-  margin-top: 20px;
-}
-
-.about-buttons button {
-  padding: 10px 20px;
-  border: none;
-  background-color: #5fb759;
-  color: white;
+/* Button */
+.read-more {
+  text-decoration: none;
   font-weight: 600;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
+  font-size: 14px;
+  color: #007bff;
+  transition: color 0.3s ease;
 }
 
-.about-buttons button:hover {
-  background-color: #000000;
+.read-more:hover {
+  color: #0056b3;
 }
+</style>
 
-@media (max-width: 768px) {
-  .about-content {
-    flex-direction: column;
-  }
-
-  .about-img {
-    width: 120px;
-    height: 120px;
-  }
-
-  .about-text h1 {
-    font-size: 1.5rem;
-  }
-
-  .about-text h3 {
-    font-size: 1rem;
-  }
-
-  .about-buttons {
-    flex-direction: column;
-  }
-
-  .about-buttons button {
-    width: 100%;
-  }
-}
-
-
- 
-    /* Responsive */
-    @media (max-width: 768px) {
-      nav {
-        display: none;
-      }
-
-      .hamburger {
-        display: flex;
-      }
-
-      .mobile-menu.show {
-        display: flex;
-      }
-
-      .mobile-dropdown-content.show {
-        display: flex;
-      }
-    }
-  </style>
-</head>
 <body>
-
-  <header>
-    <div class="nav-container">
-      <div class="logo">
-        <img src="./assets/images/logo.png" alt="Logo" />
-      </div>
-      <nav class="desktop-menu">
-        <a href="./index.html">HOME</a>
-        <a style="color: #5fb759;" href="#">ABOUT</a>
-        <a href="./programs.html">TRAINING</a>
-        <a href="./services.html">SERVICES</a>
-        
-        
-        
-        <a href="contact.html">CONTACT US</a>
-      </nav>
-
-      <div class="hamburger" onclick="toggleMenu()">
-        <div></div>
-        <div></div>
-        <div></div>
-      </div>
-    </div>
-
-    <div class="mobile-menu" id="mobileMenu">
-      <a href="index.html">HOME</a>
-      <a style="color: #5fb759;" href="#">ABOUT</a>
-        <a href="./programs.html">TRAINING</a>
-        <a href="./services.html">SERVICES</a>
-      
-      
-      <a href="contact.html">CONTACT US</a>
-    </div>
-  </header>
-
-  <section class="hero">
-    <h1>About Us</h1>
-  </section>
-
-
-
-
-<!-- about section -->
-
-
-
-  <section class="about-section">
-    <div class="about-content">
-      <img src="./assets/images/sf4.png" alt="Left Image" class="about-img left-img" />
   
-      <div class="about-text">
-        <h3>Welcome to Our Story</h3>
-        <h1>Empowering Growth and Innovation</h1>
-        <p>PIKE TECH ENGINEERING Is a Zambian owned Engineering company formed by professional and dynamic 
-          young Zambian individuals. The individuals that make up this dynamic company have experience in both 
-          mining, construction and Manufacturing industry. PIKE TECH ENGINEERING LIMITED is incorporated with 
-          patents and companies’ registraƟ on agency of Zambia (PACRA) and Mine Safety Department as a testing 
-          authority for all Non-DestrucƟve TesƟ ng (NDT).</p>
-       
-        <!-- <div class="about-buttons">
-          <button>Learn More</button>
-          <button>Get Started</button>
-        </div> -->
-      </div>
-  
-      <img src="./assets/images/sf3.png" alt="Right Image" class="about-img right-img" />
-    </div>
-  </section>
 
-  <!-- addition -->
+<section class="ngo-section">
+  <div class="container">
+    <h2 class="section-title">Our Impactful Activities</h2>
 
-<div class="tab-buttons">
-    <div class="tab-button active" onclick="showTab(0)">Work Force</div>
-    <div class="tab-button" onclick="showTab(1)">Vision</div>
-    <div class="tab-button" onclick="showTab(2)">Purpose</div>
-  </div>
+    <div class="ngo-grid">
 
-  <div class="tab-content active">
-    <img src="./assets/images/sf5.png" alt="Vision Image">
-    <div class="tab-text">
-      <h3>Our Work Force</h3>
-      <p>PIKE TECH ENGINEERING has a work force of 5 permanent employees and 5 fixed contract employees and 
-        we are dynamic in the way we hire labour when demands goes high. Our work forces have high esteemed 
-        professional experience both local and internaƟ onal who have worked both in mining, manufacturing and 
-        construcƟ on industries. Some of our employee traces their roots from Zambia consolidated copper Mines 
-        (ZCCM)</p>
-    </div>
-  </div>
-
-  <div class="tab-content">
-    <img src="./assets/images/sf6.png" alt="Vision Image">
-    <div class="tab-text">
-      <h3>Our Vision</h3>
-      <p>A Global Engineering Company that will run from generaƟ on to generation in providing quality
-        Engineering services</p>
-    </div>
-  </div>
-
-  <div class="tab-content">
-    <img src="./assets/images/sf4.png" alt="Vision Image">
-    <div class="tab-text">
-      <h3>Our Purpose</h3>
-      <p>An engineering company created to eliminate any challenge in the engineering sector, it is created with 
-        a view of providing quality engineering services in line with the internaƟ onal organizaƟ on for 
-        StandardizaƟ on (ISO) and approved Government of Zambia (GRZ) standards</p>
-    </div>
-  </div>
-</div>
-
-<script>
-  function showTab(index) {
-    const tabs = document.querySelectorAll('.tab-content');
-    const buttons = document.querySelectorAll('.tab-button');
-    tabs.forEach((tab, i) => {
-      tab.classList.toggle('active', i === index);
-      buttons[i].classList.toggle('active', i === index);
-    });
-  }
-</script>
-
-
-
-<div class="contact-section">
-  <form class="contact-form">
-    <h2>Contact Us</h2>
-    <input type="text" placeholder="Your Name" required>
-    <input type="email" placeholder="Your Email" required>
-    <textarea placeholder="Your Message" required></textarea>
-    <button type="submit">Send Message</button>
-  </form>
-</div>
-
-
-<footer class="footer">
-    <div class="footer-container">
-
-      <!-- Column 1: Useful Links -->
-      <div class="footer-links">
-        <h3>Useful Links</h3>
-        <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#">About Us</a></li>
-          <li><a href="#">Services</a></li>
-          <li><a href="#">Blog</a></li>
-          <li><a href="#">Contact</a></li>
-        </ul>
-      </div>
-
-
-         <!-- Column 1: Useful Links -->
-      <div class="footer-links">
-        <h3>Useful Links</h3>
-        <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#">About Us</a></li>
-          <li><a href="#">Services</a></li>
-          <li><a href="#">Blog</a></li>
-          <li><a href="#">Contact</a></li>
-        </ul>
-      </div>
-
-      <!-- Column 2: Social Media -->
-      <div class="footer-social">
-        <h3>Follow Us</h3>
-        <div  class="social-icons">
-          <a style="color: #fff;" href="#"><i class=" fa-facebook-f"></i></a>
-          <a href="#"><i class="fab fa-twitter"></i></a>
-          <a href="#"><i class="fab fa-instagram"></i></a>
-          <a href="#"><i class="fab fa-linkedin-in"></i></a>
-          
+      <!-- Card 1 -->
+      <div class="ngo-card">
+        <div class="card-image">
+          <img src="./assets/images/about-image.jpg" alt="Community Outreach">
+          <span class="badge">Outreach</span>
+        </div>
+        <div class="card-content">
+          <div class="card-meta">
+            <span>📍 Lusaka</span>
+            <span>🗓 Jan 2026</span>
+          </div>
+          <h3>Community Support Program</h3>
+          <p>
+            Providing essential resources and support to underprivileged 
+            families across various communities.
+          </p>
+          <a href="#" class="read-more">Call us</a>
         </div>
       </div>
 
-      <!-- Column 3: Contact Form -->
-      <div class="footer-form">
-        <h3>Contact Us</h3>
-        <form action="#" method="post">
-          <input type="text" name="name" placeholder="Your Name" required />
-          <input type="email" name="email" placeholder="Your Email" required />
-          <textarea name="message" placeholder="Your Message" required></textarea>
-          <button type="submit">Send</button>
-        </form>
+      <!-- Card 2 -->
+      <div class="ngo-card">
+        <div class="card-image">
+          <img src="./assets/images/about-image.jpg" alt="Youth Empowerment">
+          <span class="badge">Empowerment</span>
+        </div>
+        <div class="card-content">
+          <div class="card-meta">
+            <span>📍 Ndola</span>
+            <span>🗓 Dec 2025</span>
+          </div>
+          <h3>Youth Digital Skills Training</h3>
+          <p>
+            Equipping young people with modern digital and entrepreneurial 
+            skills for sustainable employment.
+          </p>
+          <a href="#" class="read-more">Call us</a>
+        </div>
       </div>
 
     </div>
-
-    <div class="footer-bottom">
-      <p>&copy; PIKE ENGINEERING. All rights reserved.</p>
-    </div>
-  </footer>
+  </div>
+</section>
 
 
-      
-
-
-
-
-  
-
-  <script>
-    function toggleMenu() {
-      document.getElementById("mobileMenu").classList.toggle("show");
-    }
-
-    function toggleDropdown(id) {
-      const dropdown = document.getElementById(`${id}-dropdown`);
-      dropdown.classList.toggle("show");
-    }
-  </script>
 
 </body>
 </html>

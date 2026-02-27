@@ -606,7 +606,7 @@ ul.slick-dots {
 
 .fun-facts em {
 	font-style: normal;
-	color: #0096c4;
+	color: purple;
 }
 
 .fun-facts p {
@@ -627,7 +627,7 @@ ul.slick-dots {
 
 .count-digit {
     margin: 5px 0px;
-    color: #0096c4;
+    color: purple;
     font-weight: 700;
     font-size: 36px;
 }
@@ -685,7 +685,7 @@ ul.slick-dots {
 
 .more-info .right-content em {
 	font-style: normal;
-	color: #0096c4;
+	color: purple;
 }
 
 .more-info .right-content p {
@@ -726,7 +726,7 @@ ul.slick-dots {
 	margin-top: 8px;
 	font-weight: 600;
 	font-size: 14px;
-	color: #0096c4;
+	color: purple;
 }
 .testimonial-item img {
 	max-width: 60px;
@@ -759,7 +759,7 @@ ul.slick-dots {
 }
 
 .callback-form .contact-form {
-	background-color: #0096c4;
+	background-color: purple;
 	padding: 60px;
 	border-radius: 5px;
 	text-align: center;
@@ -1222,6 +1222,308 @@ footer .contact-form button.filled-button:hover {
 	color: #a4c639;
 	font-size: 15px;
 }
+
+
+
+/* posts */
+
+
+.featured-activity {
+  padding: 90px 20px;
+  background: linear-gradient(to bottom, #f6f9fc, #ffffff);
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.featured-card {
+  max-width: 1100px;
+  margin: auto;
+  background: #ffffff;
+  border-radius: 22px;
+  overflow: hidden;
+  box-shadow: 0 25px 60px rgba(0,0,0,0.08);
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+}
+
+.featured-image {
+  position: relative;
+  height: 100%;
+}
+
+.featured-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.6), rgba(0,0,0,0.1));
+}
+
+.featured-badge {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background: #e91e63;
+  color: #fff;
+  padding: 8px 18px;
+  border-radius: 50px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.featured-content {
+  padding: 50px 45px;
+}
+
+.featured-content h2 {
+  font-size: 30px;
+  margin-bottom: 10px;
+  color: #1a1a1a;
+}
+
+.subtitle {
+  font-size: 17px;
+  font-weight: 500;
+  color: #666;
+  margin-bottom: 25px;
+}
+
+.featured-content p {
+  font-size: 15px;
+  color: #444;
+  line-height: 1.7;
+  margin-bottom: 18px;
+}
+
+.impact-points {
+  margin: 25px 0;
+  padding: 20px;
+  background: #f9f9f9;
+  border-radius: 14px;
+  display: grid;
+  gap: 10px;
+  font-size: 14px;
+  color: #333;
+}
+
+.btn-primary {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 26px;
+  background: #e91e63;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 50px;
+  font-size: 14px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  background: #c2185b;
+  transform: translateY(-2px);
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .featured-card {
+    grid-template-columns: 1fr;
+  }
+}
+/* posts */
+
+
+
+
+/* activity posts */
+
+.container {
+  max-width: 1400px;   /* Controls how wide your content can go */
+  margin: 0 auto;      /* Centers everything */
+  padding: 0 20px;
+}
+
+
+.ngo-section {
+  padding: 80px 20px;
+  background: linear-gradient(to bottom, #ffffff, #f4f7fb);
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 36px;
+  margin-bottom: 60px;
+  font-weight: 600;
+  color: #1a1a1a;
+}
+
+.ngo-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 40px;
+  justify-content: center; /* helps center smaller rows */
+}
+
+.ngo-card {
+  background: #ffffff;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.06);
+  transition: all 0.35s ease;
+  width: 100%;
+  max-width: 580px;   /* makes each card look fuller */
+  margin: 0 auto;     /* centers each card */
+}
+
+.ngo-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.1);
+}
+
+/* Image Section */
+.card-image {
+  position: relative;
+  height: 240px;
+  overflow: hidden;
+}
+
+.card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.ngo-card:hover img {
+  transform: scale(1.08);
+}
+
+/* Gradient Overlay */
+.card-image::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  background: linear-gradient(to top, rgba(0,0,0,0.6), transparent);
+}
+
+/* Badge */
+.badge {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  background: #007bff;
+  color: #fff;
+  padding: 6px 14px;
+  font-size: 12px;
+  border-radius: 50px;
+  font-weight: 500;
+}
+
+/* Content */
+.card-content {
+  padding: 25px;
+}
+
+.card-meta {
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+  color: #777;
+  margin-bottom: 15px;
+}
+
+.card-content h3 {
+  font-size: 22px;
+  margin-bottom: 12px;
+  color: #222;
+}
+
+.card-content p {
+  font-size: 15px;
+  color: #555;
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+/* Button */
+.read-more {
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 14px;
+  color: #007bff;
+  transition: color 0.3s ease;
+}
+
+.read-more:hover {
+  color: #0056b3;
+}
+
+
+.card-subtitle {
+  font-size: 15px;
+  color: #555;
+  font-weight: 500;
+  margin-bottom: 18px;
+  line-height: 1.5;
+}
+
+/* Health badge */
+.health-badge {
+  background: #e91e63;
+}
+
+/* Structured content boxes */
+.impact-box {
+  background: #f8fafc;
+  padding: 18px;
+  border-radius: 12px;
+  margin: 20px 0;
+}
+
+.impact-box.light {
+  background: #eef3f9;
+}
+
+.impact-box strong {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+.impact-box ul {
+  padding-left: 18px;
+  margin: 0;
+}
+
+.impact-box ul li {
+  font-size: 14px;
+  margin-bottom: 8px;
+  color: #444;
+}
+
+
+/* Tablet */
+@media (max-width: 1100px) {
+  .ngo-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .ngo-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* end of activity posts */
 
 
 
