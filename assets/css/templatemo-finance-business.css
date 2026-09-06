@@ -92,7 +92,7 @@ a.border-button:hover {
 	letter-spacing: 1px;
 }
 
-#preloader {
+/* #preloader {
   overflow: hidden;
   background: purple;
   left: 0;
@@ -139,7 +139,7 @@ a.border-button:hover {
 #preloader .jumper > div:nth-child(3) {
   -webkit-animation-delay: 0.66666s;
   animation-delay: 0.66666s;
-}
+} */
 
 @-webkit-keyframes jumper {
   0% {
@@ -231,6 +231,8 @@ a.border-button:hover {
 
 
 /* Header Style */
+
+
 header {
 	position: absolute;
 	z-index: 99999;
@@ -245,6 +247,7 @@ header {
 header .navbar {
 	padding: 20px 0px;
 }
+
 .background-header .navbar {
 	padding: 10px 0px;
 }
@@ -304,6 +307,8 @@ header .navbar {
 	transition: all 0.5s;
 	margin-top: 5px;
 }
+
+
 .navbar .navbar-nav .nav-link:hover,
 .navbar .navbar-nav .active>.nav-link,
 .navbar .navbar-nav .nav-link.current,
