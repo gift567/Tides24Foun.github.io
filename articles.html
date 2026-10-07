@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>InsightHub | Articles</title>
+<style>
+:root{
+  --ink:#14213d;
+  --muted:#697386;
+  --surface:#f5f7fb;
+  --card:#ffffff;
+  --line:#e7eaf0;
+  --accent:purple;
+  --accent2:purple;
+  --shadow:0 14px 35px rgba(20,33,61,.08);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Inter,Segoe UI,Arial,sans-serif;background:var(--surface);color:var(--ink);line-height:1.6}
+a{text-decoration:none;color:inherit}
+.container{width:min(1180px,92%);margin:auto}
+header{background:#fff;border-bottom:1px solid var(--line);position:sticky;top:0;z-index:20}
+.nav{height:76px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+.logo{font-size:22px;font-weight:800;letter-spacing:-.5px}
+.logo span{color:var(--accent)}
+.navlinks{display:flex;gap:28px;font-size:14px;color:#566174}
+.navlinks a:hover{color:var(--accent)}
+.hero{padding:72px 0 42px;background:linear-gradient(135deg,#f7faf8,#eef5f1)}
+.eyebrow{display:inline-block;color:var(--accent);font-weight:800;font-size:12px;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:14px}
+.hero h1{font-size:clamp(38px,5vw,64px);line-height:1.05;letter-spacing:-2px;max-width:760px}
+.hero p{margin-top:18px;color:var(--muted);max-width:680px;font-size:17px}
+.toolbar{display:flex;justify-content:space-between;align-items:center;gap:18px;margin:34px 0 26px;flex-wrap:wrap}
+.categories{display:flex;gap:8px;flex-wrap:wrap}
+.category{border:1px solid var(--line);background:#fff;border-radius:999px;padding:9px 15px;color:#596476;font-size:13px;cursor:pointer}
+.category.active,.category:hover{background:var(--accent);border-color:var(--accent);color:#fff}
+.search{background:#fff;border:1px solid var(--line);border-radius:12px;padding:11px 15px;width:250px;outline:none}
+.featured{display:grid;grid-template-columns:1.2fr .8fr;background:var(--card);border-radius:22px;overflow:hidden;box-shadow:var(--shadow);margin-bottom:42px}
+.featured-image{ background-image: url('./assets/images/Tides3.jpg');position:relative;overflow:hidden; background-repeat: no-repeat; background-size: cover;}
+.featured-image:after{content:"";position:absolute;width:260px;height:260px;border-radius:50%;background:rgba(255,255,255,.09);right:-70px;top:-70px;box-shadow:-170px 190px 0 35px rgba(255,255,255,.06)}
+.featured-content{padding:44px}
+.tag{font-size:12px;font-weight:800;color:var(--accent);text-transform:uppercase;letter-spacing:1px}
+.featured h2{font-size:34px;line-height:1.15;margin:14px 0}
+.featured p{color:var(--muted);margin-bottom:24px}
+.meta{font-size:12px;color:#8992a2;margin-bottom:22px}
+.btn{display:inline-flex;padding:12px 18px;background:var(--accent);color:white;border-radius:10px;font-size:13px;font-weight:700}
+.section-title{display:flex;justify-content:space-between;align-items:end;margin-bottom:20px}
+.section-title h2{font-size:26px}
+.section-title span{font-size:13px;color:var(--muted)}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;padding-bottom:70px}
+.card{background:#fff;border:1px solid var(--line);border-radius:17px;overflow:hidden;transition:.2s;box-shadow:0 5px 18px rgba(20,33,61,.04)}
+.card:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
+.card-image{height:275px;background-image: url('./assets/images/Tides6.jpg'); background-repeat: no-repeat; background-size: cover;background-position: center;;position:relative}
+.card:nth-child(2) .card-image{ background-image: url('./assets/images/Tides3.jpg'); background-repeat: no-repeat; background-size: cover;background-position: center;}
+.card:nth-child(3) .card-image{background-image: url('./assets/images/Tides4.jpg'); background-repeat: no-repeat; background-size: cover;background-position: center;}
+.card:nth-child(4) .card-image{background-image: url('./assets/images/Tides5.jpg'); background-repeat: no-repeat; background-size: cover;background-position: center;}
+.card:nth-child(5) .card-image{background:linear-gradient(135deg,#6c2448,#ce719a)}
+.card:nth-child(6) .card-image{background:linear-gradient(135deg,#354a27,#91ae5d)}
+.card-body{padding:22px}
+.card h3{font-size:19px;line-height:1.3;margin:8px 0 10px}
+.card p{font-size:13px;color:var(--muted)}
+.card .meta{margin-top:16px;margin-bottom:0}
+.no-results{text-align:center;padding:50px;color:var(--muted);display:none}
+footer{background:#14213d;color:#dbe1eb;padding:30px 0;font-size:13px}
+@media(max-width:800px){
+  .navlinks{display:none}
+  .featured{grid-template-columns:1fr}
+  .featured-image{min-height:220px}
+  .grid{grid-template-columns:1fr 1fr}
+}
+@media(max-width:560px){
+  .grid{grid-template-columns:1fr}
+  .search{width:100%}
+  .featured-content{padding:28px}
+  .hero{padding-top:48px}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="container nav">
+    <div class="logo">Tides24 <span>Foundation</span></div>
+    <nav class="navlinks">
+      <a href="index.html">Home</a>
+       <a href="about.html">Our Team </a>
+      <a href="services.html">Our Focus Areas </a>
+      <a href="contact.html">Contact Us </a>
+     
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <span class="eyebrow">Articles</span>
+    <h1>Insights and stories that matter.</h1>
+    <p>Explore the latest articles,  practical knowledge from our team.</p>
+  </div>
+</section>
+
+<main class="container" id="articles">
+  <div class="toolbar">
+    <div class="categories">
+      <button class="category active" data-category="all">All</button>
+      <button class="category" data-category="HIV">HIV</button>
+      <button class="category" data-category="Child Abuse">Child Abuse</button>
+      <button class="category" data-category="Vaccination">Vaccination</button>
+      
+    </div>
+    <input class="search" id="search" type="search" placeholder="Search articles...">
+  </div>
+
+  <article class="featured">
+    <div class="featured-image"></div>
+    <div class="featured-content">
+      <div class="tag">Featured</div>
+      <h2>SGBV Sensitization for School Learners in Zambia</h2>
+      <p>In December 2025, Tides24 Foundation Zambia (TFZ), in collaboration with George Health Facility, conducted Sexual and Gender-Based Violence (SGBV) sensitization sessions at Diana Kaimba Primary School and George Central School.
+
+The sessions equipped learners with age-appropriate knowledge to recognize, prevent, and report SGBV, including understanding safe and unsafe touch and different forms of abuse. Learners also received information on sexual and reproductive health and rights (SRHR), HIV prevention, counselling, HIV testing, pregnancy screening, and post-exposure prophylaxis (PEP).
+
+The initiative strengthened links between schools, health facilities, and community support systems while promoting child protection, safer learning environments, and early help-seeking among children and adolescents.
+
+Through school-based SGBV prevention and SRHR education, TFZ continues to support children and adolescents to stay safe, informed, and healthy.</p>
+      <div class="meta">October 7, 2026 &nbsp; • &nbsp; </div>
+      <a href="#" class="btn">More Information →</a>
+    </div>
+  </article>
+
+  <div class="section-title">
+    <h2>Latest articles</h2>
+    <span id="count">6 articles</span>
+  </div>
+
+  <section class="grid" id="articleGrid">
+    <article class="card" data-category="HIV">
+      <div class="card-image"></div>
+      <div class="card-body">
+        <div class="tag">HIV</div>
+        <h3>Sis to Sis for Self Care Model: Supporting Young Mothers in Zambia</h3>
+        <p>In 2025, Tides24 Foundation Zambia (TFZ), with support from UNAIDS, introduced the Sis to Sis for Self Care Model to support pregnant and breastfeeding adolescent girls and young women living with or at risk of HIV in Lusaka.
+
+<br><br>
+Initially implemented at George, Kanyama West, Chainda and Ng’ombe health facilities, the programme uses trained peer mentors, buddy systems and safe spaces to help young mothers overcome challenges such as stigma, poverty and limited social support.
+
+The initiative provides support in HIV prevention and treatment, sexual and reproductive health, mental health, self-care and social empowerment, while connecting young women to healthcare and livelihood opportunities.
+
+Through peer support and community connections, Sis to Sis empowers young mothers to take charge of their health and build brighter futures. <br><br>
+
+Together, we can ensure every young mother has the support, knowledge and opportunity to thrive. Join us in creating healthier, stronger and more empowered communities.</p>
+        <div class="meta">Oct 06, 2026 • 5 min read</div>
+      </div>
+    </article>
+
+    <article class="card" data-category="Vaccination">
+      <div class="card-image"></div>
+      <div class="card-body">
+        <div class="tag">Vaccination</div>
+        <h3>The Importance of Vaccination in Preventing Disease</h3>
+        <p>Vaccination is an important part of protecting children from vaccine-preventable diseases. However, some families face challenges that can affect access to vaccination services, including limited information, distance to healthcare facilities and misconceptions about vaccines.
+
+To help address these challenges, [NGO Name] conducts community awareness activities that encourage parents and caregivers to understand the importance of childhood immunisation and to follow the vaccination schedules provided by qualified healthcare professionals.
+
+<br><br>
+Through outreach programmes, the organisation shares information with parents and caregivers and encourages them to take their children to appropriate health facilities for vaccinations.
+
+Where possible, the NGO works alongside healthcare workers and community structures to promote vaccination awareness and help families connect with available services.
+
+The organisation also emphasises the importance of parents keeping their children's health records and following guidance provided by healthcare professionals.</p>
+        <div class="meta">Oct 04, 2026 • 6 min read</div>
+      </div>
+    </article>
+
+    <article class="card" data-category="Child Abuse">
+      <div class="card-image"></div>
+      <div class="card-body">
+        <div class="tag">Child Abuse</div>
+        <h3>Protecting Our Children</h3>
+        <p>The organisation conducts awareness programmes designed to help children understand their rights and recognise inappropriate behaviour, while also educating parents, guardians and community members about their responsibility to protect children.
+
+<br><br>
+The NGO encourages communities to create safe environments where children can speak openly about concerns and where suspected abuse can be reported through the appropriate channels.
+
+The organisation also works to connect affected children and families with appropriate professional support, including social welfare services, counselling and healthcare providers where necessary.</p>
+        <div class="meta">Oct 02, 2026 • 4 min read</div>
+      </div>
+    </article>
+
+ 
+
+  
+
+
+  </section>
+
+  <div class="no-results" id="noResults">No articles match your search.</div>
+</main>
+
+<!-- <footer>
+  <div class="container">© 2026 InsightHub. Knowledge and insights.</div>
+</footer> -->
+
+<script>
+const cards = [...document.querySelectorAll('.card')];
+const buttons = [...document.querySelectorAll('.category')];
+const search = document.getElementById('search');
+const count = document.getElementById('count');
+const noResults = document.getElementById('noResults');
+let activeCategory = 'all';
+
+function filterArticles(){
+  const term = search.value.toLowerCase().trim();
+  let visible = 0;
+
+  cards.forEach(card => {
+    const matchesCategory = activeCategory === 'all' || card.dataset.category === activeCategory;
+    const matchesSearch = card.innerText.toLowerCase().includes(term);
+    const show = matchesCategory && matchesSearch;
+    card.style.display = show ? '' : 'none';
+    if(show) visible++;
+  });
+
+  count.textContent = `${visible} article${visible === 1 ? '' : 's'}`;
+  noResults.style.display = visible ? 'none' : 'block';
+}
+
+buttons.forEach(button => {
+  button.addEventListener('click', () => {
+    buttons.forEach(b => b.classList.remove('active'));
+    button.classList.add('active');
+    activeCategory = button.dataset.category;
+    filterArticles();
+  });
+});
+
+search.addEventListener('input', filterArticles);
+</script>
+</body>
+</html>
