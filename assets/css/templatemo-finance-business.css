@@ -86,7 +86,7 @@ a.border-button:hover {
 .section-heading span {
 	display: block;
 	margin-top: 15px;
-	text-transform: uppercase;
+	text-transform:none;
 	font-size: 15px;
 	color: #666;
 	letter-spacing: 1px;
@@ -1234,7 +1234,7 @@ footer .contact-form button.filled-button:hover {
 
 
 .featured-activity {
-  padding: 90px 20px;
+  /* padding: 10px 20px; */
   background: linear-gradient(to bottom, #f6f9fc, #ffffff);
   font-family: 'Segoe UI', sans-serif;
 }
